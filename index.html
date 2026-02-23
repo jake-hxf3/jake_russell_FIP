@@ -3,11 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d0e8431583.js" crossorigin="anonymous"></script>
     <link href="css/grid.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
-    <title>Document</title>
+    <title>Squeezit | Main Page</title>
 </head>
     <body>
+        <h1 class="hidden">Squeezit - Fruity Drink for Street Kids</h1>
+        <header id="main-header" class="full-width-grid-con">
+            <div class="grid-con col-start-2 col-end-3">
+                <button id="burger" class="ico"></button> 
+                <nav id="main-nav" class="col-span-full m-col-start-1 m-col-end-5">
+                    <h2 class="hidden">Main Navigation</h2>      
+                    <ul id="burger-con">
+                        <li><a href="#">Flavors</a></li>
+                        <li><a href="">Promos</a></li>
+                        <li><a href="">Contact&nbsp;Us</a></li>
+                    </ul>
+                </nav>
+
+                <div id="main-logo" class="col-start-2 col-end-4 m-col-start-6 m-col-end-8">
+                    <a href="index.html">
+                        <img src="images/logo-main.svg" alt="squeezit logo">
+                    </a>
+                </div>
+
+                <a id="shop-now-btn" href="#" class="btn emph m-col-start-10 m-col-end-12">Shop Now</a>
+
+                <div id="func-btn" class="ico col-start-4 col-end-5 m-col-start-12 m-col-end-13">
+                    <img src="images/search-icon.svg" alt="icon">
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="hero" class="full-width-grid-con decorated-bg">
+                <h2 class="hidden">Main Hero</h2>
+                <div id="hero-bg" class="grid-con col-start-2 col-end-3">
+                    <div class="col-span-full m-col-start-4 m-col-end-10 l-col-start-5 l-col-end-9">
+                        <img src="images/logo-main.svg" alt="Squeezit Hero Logo">
+                    </div>
+                    <p class="p-text emph col-span-full m-col-start-3 m-col-end-11">The 90s called. They want their drink back in the market.</p>
+                    <a href="#" id="hero-shop-now-btn" class="btn emph col-start-2 col-end-4">Shop Now</a>
+                    <div id="hero-fg" class="col-span-full m-col-start-3 m-col-end-11">
+                        <img src="images/render-bottle-transparent.png" alt="a bunch of squeezit bottles">
+                    </div>
+                </div>
+            </section>
+
+            <article id="product" class="grid-con centered">
+                <h2 class="h-text col-span-full">MEET THE SQUEEZIES</h2>
+                <p class="p-text col-span-full">SqueeZit is back with new, energetic flavors!<br>Revive your style, your swag & your energy like they did back in the 90s.</p>
+                <div id="product-slider-con" class="col-span-full">
+                    <ul id="product-slider">
+                        <li>
+                            <div class="product-img">
+                                <img src="images/blue-bottle-transparent.webp" alt="berry b wild bottle">
+                            </div>
+                            <p class="cap-text">Berry B. Wild</p>                        
+                        </li>
+
+                        <li>
+                            <div class="product-img">
+                                <img src="images/orange-bottle-transparent.webp" alt="street smart orange bottle">
+                            </div>
+                            <p class="cap-text">Street Smart Orange</p>   
+                        </li>
+
+                        <li>
+                            <div class="product-img">
+                                <img src="images/blue-bottle-transparent.webp" alt="berry b wild bottle">
+                            </div>
+                            <p class="cap-text">Berry B. Wild</p>                        
+                        </li>
+
+                        <li>
+                            <div class="product-img">
+                                <img src="images/orange-bottle-transparent.webp" alt="street smart orange bottle">
+                            </div>
+                            <p class="cap-text">Street Smart Orange</p>   
+                        </li>
+
+                        <li>
+                            <div class="product-img">
+                                <img src="images/blue-bottle-transparent.webp" alt="berry b wild bottle">
+                            </div>
+                            <p class="cap-text">Berry B. Wild</p>                        
+                        </li>
+
+                        <li>
+                            <div class="product-img">
+                                <img src="images/orange-bottle-transparent.webp" alt="street smart orange bottle">
+                            </div>
+                            <p class="cap-text">Street Smart Orange</p>   
+                        </li>
+                    </ul>                    
+                </div>
+                    
+                <a href="#" class="btn col-start-2 col-end-4 m-col-start-5 m-col-end-9">View All</a>
+
+            </article>
+
+            <section id="feature-2" class="grid-con centered">
+                <h2 class="h-text col-span-full m-col-start-5 m-col-end-9">Now Made With Real Fruits</h2>
+                <p class="p-text col-span-full m-col-start-3 m-col-end-11">SqueeZit is back with real fruits in our production. You name it: Apple Apricot Avocado Banana Bilberry Blackberry Blackcurrant Blueberry Boysenberry Currant Cherry Cherimoya Chicofruit Cloudberry</p>
+                <div class="col-span-full m-col-start-3 m-col-end-11">
+                    <img src="images/happy-fruits.svg" alt="happy fruits">    
+                </div>
+                
+            </section>
+
+            <div id="newsletter-row-wrapper" class="grid-con centered">
+                <div id="newsletter-con" class="col-span-full m-col-start-2 m-col-end-12">
+                    <section id="newsletter" class="m-col-start-1 m-col-end-7">
+                        <h2 class="h-text m-text-left">Join Our Newsletter</h2>
+                        <p class="p-text m-text-left">Join us and get fun news & on products, promotions and events</p>
+                        <form action="get" class="form-field-go">
+                            <input type="email" placeholder="example@email.org">
+                            <input type="submit" value="Go!">
+                        </form>                         
+                    </section>                   
+                </div>
+
+                    <div id="newsletter-img-con" class="col-span-full m-col-start-8 m-col-end-12 l-col-start-9 l-col-end-12">
+                        <div id="newsletter-img"></div>
+                    </div>
+
+            </div>
+
+        </main>
+
+        <footer id="main-footer" class="full-width-grid-con">
+            <h2 class="hidden">Main Footer</h2>
+            <div class="col-start-2 col-end-3 grid-con">
+
+                <section id="contact-us" class="col-span-full m-col-start-5 m-col-end-8 m-overlap">
+                    <h3 class="hidden">Contact Us</h3>
+                    <p class="company-name"><b>©2026 Squeezit Co, Ltd.</b></p>
+                    <p>☎ (717) 550-1675</p>
+                    <p>✉︎ squeezitdrinks@info.com</p>
+                </section>
+
+                <nav id="footer-nav" class="col-span-full grid-con m-overlap">
+                    <h3 class="hidden">Footer Links</h3>
+                    <ul class="col-span-full m-col-start-8 m-col-end-10">
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">About&nbsp;Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                    <ul class="col-span-full m-col-start-10 m-col-end-12">
+                        <li><a href="#">Privacy&nbsp;Policy</a></li>
+                        <li><a href="#">Cookie&nbsp;Settings</a></li>
+                        <li><a href="#">Terms&nbsp;of&nbsp;Use</a></li>
+                    </ul>
+                </nav>
+                
+            </div>
+
+
+            
+            <div class="col-start-2 col-end-3 grid-con">
+                <div id="footer-logo" class="col-start-2 col-end-4 m-col-start-1 m-col-end-4">
+                    <a href="#"><img src="images/logo-main.svg" alt="squeezit logo"></a>
+                </div>
+
+                <section id="social-links" class="col-start-2 col-end-4 m-col-start-1 m-col-end-4">
+                    <h3 class="hidden">Social media links</h3>
+                        <div class="social-icon"></div>
+                        <div class="social-icon"></div>
+                        <div class="social-icon"></div>
+                        <div class="social-icon"></div>
+                </section>                
+            </div>
+
+
+
+
+        </footer>
 
         <script src="js/main.js"></script>
     </body>
