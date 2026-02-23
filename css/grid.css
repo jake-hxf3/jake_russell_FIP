@@ -15,7 +15,7 @@ img, embed, object, video, picture {
 
 /* ---Mini CSS reset--- */
 
-body, p, h1, h2, h3, h4, h5 {
+body, p, h1, h2, h3, h4, h5, ul {
    margin: 0px; 
    padding: 0px;
 }
@@ -26,40 +26,61 @@ body, p, h1, h2, h3, h4, h5 {
    display: none;
 }
 
-.hidden {
-   opacity: 0;
-   position: fixed;
-   bottom: 0;
-   -webkit-user-select: none;     
-   -moz-user-select: none;
-   -ms-user-select: none;
-   user-select: none;
-   pointer-events: none;
+.hidden:not(:focus):not(:active) {
+   position: absolute !important; 
+   width: 1px !important; 
+   height: 1px !important; 
+   padding: 0 !important; 
+   margin: -1px !important; 
+   overflow: hidden !important; 
+   clip-path: inset(50%); 
+   white-space: nowrap !important; 
+   border: 0 !important; 
 }
-
-.box {
-   background-color: powderblue;
-   color: rgb(27, 27, 27);
-   border-radius: 5px;
-   padding: 20px;
-   text-align: center;
-   margin-top: 10px;
-   margin-bottom:10px;
- }
 
 .centered {
    margin: 0 auto;
 }
+
+.box {
+   background-color: violet;
+   color: #fff;
+   padding: 20px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+ }
+
+ .test-color {
+   background-color: aqua;
+ }
+
+  .test-color2 {
+   background-color: blue;
+ }
+
+ .full-width-grid-con {
+   /* set this container as a grid, with 3 columns
+   the other grid will sit in the middle column, this allows for overlapping content */
+   display: grid; 
+	grid-template-columns: 1fr minmax(0, 1200px) 1fr;  
+}
+
+.image-placeholder {
+   width: 100%;
+   background-color: #eee;
+   border: 2px dashed #aaa;
+   aspect-ratio: 16/9;
+}
+
 
 /* ---Mobile Library Grid Styles--- */
 
  .grid-con { 
    display: grid;
    grid-template-columns: repeat(4, minmax(0, 1fr));
-   grid-column-gap: 30px;
+   grid-column-gap: 28px;
    max-width: 1200px;
-   padding-left: 15px;
-   padding-right: 15px;
+   padding: 0 16px;
 }
 
 /* Add full width grid con for nesting, later */
@@ -87,8 +108,7 @@ body, p, h1, h2, h3, h4, h5 {
   .grid-con { 
       grid-template-columns: repeat(12, minmax(0, 1fr));
       grid-column-gap: 20px;
-      padding-left: 16px;
-      padding-right: 16px;
+      padding: 0 16px;
    }
 
   .m-col-span-1 { grid-column: span 1; }
@@ -132,7 +152,6 @@ body, p, h1, h2, h3, h4, h5 {
    .m-col-end-11	{grid-column-end: 11;}
    .m-col-end-12	{grid-column-end: 12;}
    .m-col-end-13	{grid-column-end: 13;}
-
 }
 
 
@@ -140,9 +159,8 @@ body, p, h1, h2, h3, h4, h5 {
 
 @media screen and (min-width: 1200px) { 
    .grid-con { 
-      grid-column-gap: 30px;
-      padding-left: 15px;
-      padding-right: 15px;
+      grid-column-gap: 28px;
+      padding: 0 16px;
    }
 
    .l-col-span-1  { grid-column: span 1; }
