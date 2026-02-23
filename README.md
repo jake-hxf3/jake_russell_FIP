@@ -1,7 +1,7 @@
-# Project Name
-![insert alt text](images/example.jpg)
+# FIP - Squeezit Juice
+![Squeezit Logo](images/logo-main.svg)
 
-This is a project about [insert topic].
+This is a website project about the brand of Squeezit Street Juice.
 
 ## Installation 💻
 No installation required, simply download the zip file and extract.
