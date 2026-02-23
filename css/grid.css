@@ -67,11 +67,10 @@ body, p, h1, h2, h3, h4, h5, ul {
 
 .image-placeholder {
    width: 100%;
-   background-color: #eee;
+   background-image: linear-gradient(to right, #F59E0B, #ec4899);
    border: 2px dashed #aaa;
    aspect-ratio: 16/9;
 }
-
 
 /* ---Mobile Library Grid Styles--- */
 
