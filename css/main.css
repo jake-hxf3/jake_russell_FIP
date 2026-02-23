@@ -1,6 +1,4 @@
 /* 1. ---General Styles--- */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 @font-face {
     font-family: "Kotton";
     src: url(fonts/Kotton.woff) format('woff');
@@ -8,10 +6,6 @@
 
 body {
     font-family: "Roboto", Helvetica, sans-serif;
-}
-
-.emph{
-    font-family: "Kotton", Helvetica, sans-serif;
 }
 
 
@@ -27,6 +21,10 @@ nav ul li a {
 /* Utility Classes */
 .overlap {
     grid-row: 1/-1;
+}
+
+.order-1 {
+    order: -1;
 }
 
 .top-layer {
@@ -46,13 +44,15 @@ nav ul li a {
     display: grid;
     place-items: center;
     text-transform: uppercase;
-    padding: 10px;
+    padding: 0 0.625rem;
     color: white;
     text-decoration: none;
     text-align: center;
     background-color: #692891;
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
     font-size: 1.25rem;
-    font-weight: 500;
+    line-height: 2.75rem;
+    font-weight: 400;
     transition: all ease-in-out 0.5s;
 }
 
@@ -60,11 +60,35 @@ nav ul li a {
     background-color: #a340ff;
 }
 
+.btn-s {height: 1.5rem};
+.btn-m {height: 2rem;}
+.btn-m1 {height: 2.375rem;}
+.btn-l {height: 3rem;}
+.btn-xl {height: 3.75rem;}
+
 /* 2.2. Icons */
 .ico {
     aspect-ratio: 1/1;
-    width: 32px;
+    width: 2rem;
 }
+
+.social-icon {
+    display: grid;
+    place-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.social-icon a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.social-icon:hover a {
+    color: #a340ff;
+}
+
 
 /* 2.3. Fonts */
 .h-text {
@@ -78,6 +102,10 @@ nav ul li a {
     text-align: center;
 }
 
+.h-text + .p-text {
+    margin-top: 1.25rem;
+}
+
 .cap-text {
     font-family: "Kotton", Helvetica, sans-serif;
     font-size: 1.25rem;
@@ -85,9 +113,37 @@ nav ul li a {
     letter-spacing: -2%;
 }
 
+a {
+    color: #47006D;
+    transition: all 0.5s ease-in-out;
+}
+
+a:not(.btn):hover {
+    color: #a340ff;
+}
+
+.emph{
+    font-family: "Kotton", Helvetica, sans-serif;
+}
+
+.price-tag {
+    color: green;
+    font-size: 2rem;
+    font-family: "Kotton", Arial, sans-serif;
+}
+
 .text-left {text-align: left;}
 .text-right {text-align: right;}
 .text-center {text-align: center;}
+
+.text-s {font-size: 0.75rem;}
+.text-m {font-size: 1.25rem;}
+.text-l {font-size: 1.5rem;}
+.text-xl {font-size: 2.25rem;}
+.text-2xl {font-size: 2.5rem;}
+.text-3xl {font-size: 3rem;}
+.text-4xl {font-size: 4rem;}
+.text-5xl {font-size: 4.5rem;}
 
 
 /* 2.4. Forms & Fields */
@@ -110,7 +166,7 @@ nav ul li a {
         appearance: none;
         caret-color: #47006D;
         border: #692891 2px solid;
-        height: 2.25rem;
+        height: 3rem;
         padding: 0 1rem;
         border-radius: 50px;
         font-size: 1rem;
@@ -135,14 +191,6 @@ nav ul li a {
     input[type="submit"]:hover {
         background-color: #a340ff;
     }
-
-
-
-/* 2.5. Spacing */
-
-
-
-
 
 
 
@@ -223,6 +271,7 @@ nav ul li a {
 }
 
 #hero-bg {
+    padding-top: 2.5rem;
     background-color: rgba(18, 18, 18, 0.542);
     background-image: url(../images/graffiti-wall-frame.jpg);
     background-blend-mode: darken;
@@ -234,11 +283,16 @@ nav ul li a {
     font-size: 1.25rem;
     color: #FFF793;
     filter:  drop-shadow(0px 3px 3px black);
-    margin-top: 1rem;
+    margin: 1rem 3rem 1.5rem;
+}
+
+#hero-shop-now-btn {
+    margin-bottom: 1.75rem;
 }
 
 #hero-fg {
     filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.462));
+    margin-bottom: 2.5rem;
 }
 
 #hero-fg img {
@@ -248,8 +302,13 @@ nav ul li a {
 
 
 /* 5. ---Products Section--- */
+#product {
+    margin-top: 2.5rem;
+}
+
 #product-slider-con {
     overflow-x: scroll;
+    margin: 2rem 0;
 }
 #product-slider {
     display: flex;
@@ -267,7 +326,6 @@ nav ul li a {
 }
 
 .product-img {
-    overflow: hidden;
     margin: 0 auto;
     width: 90px;
     aspect-ratio: 90/246;
@@ -275,26 +333,53 @@ nav ul li a {
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.462));
 }
 
+#view-all-btn {
+    margin: 0 2.5rem;
+}
+
 /* 6. ---Kids Drink Section--- */
 
 /* 7. ---Real Fruits Section--- */
+#feature-2 {
+    margin-top: 8rem;
+}
+
+#fruit-drawing {
+    margin-top: 4rem;
+}
 
 /* 8. ---Newsletter Section--- */
 #newsletter-row-wrapper {
+    margin-top: 6rem;
     background-color: lightgray;
 }
 
+#newsletter h2 {
+    margin-top: 3rem;
+}
+
+#newsletter p {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+#newsletter form {
+    margin: 3rem 2.5rem;
+}
+
     #newsletter-img {
-        height: 300px;
-        background-image: url(../images/render-bottle-transparent.png);
+        height: 500px;
+        background-image: url(../images/poster2.webp);
         background-size: contain;
         background-position: 50%;
         background-repeat: no-repeat;
+        margin-bottom: 3rem;
     }
 
 
 /* 9. ---Footer--- */
 #main-footer {
+    padding: 2rem 0 2.5rem;
     min-height: 300px;
     background-color: #FFF793;
 }
@@ -317,6 +402,7 @@ nav ul li a {
 }
 
 #footer-logo {
+    margin-top: 2.5rem;
     text-align: center;
 }
 #footer-logo img {
@@ -330,6 +416,7 @@ nav ul li a {
 
 /* 10. ---Responsiveness--- */
 @media screen and (min-width: 768px) {
+    /* 1. ---General Styles--- */
    .m-text-left {text-align: left;}
    .m-text-right {text-align: right;}
    .m-text-center {text-align: center;}
@@ -341,6 +428,9 @@ nav ul li a {
     .btn {
         font-size: 1.125rem;
     }
+
+
+    /* 3. ---Main Nav--- */
 
     #burger {
         display: none;
@@ -355,6 +445,7 @@ nav ul li a {
     }
 
 
+    /* 4. ---Hero Section--- */
 
     #hero {
         max-height: 580px;
@@ -376,19 +467,40 @@ nav ul li a {
         padding-top: 10%;
     }
 
+
+    /* 5. ---Product Showcase--- */
+
     #product-slider {
         width: 100%;
         min-width: 1000px;
+    }
+
+    #view-all-btn {
+        margin: 0;
     }
 
     .product-img {
         width: 117px;
     }
 
+    .product-img:hover > img {
+        animation: wiggle 0.3s 0.2s alternate;
+    }
 
+    @keyframes wiggle {
+        20% {transform: rotate(7deg);}
+        40% {transform: rotate(0deg);}
+        60% {transform: rotate(-7deg);}
+        80% {transform: rotate(0deg);}
+        100% {transform: rotate(0deg);}    
+    }
+
+
+    /* 8. ---Newsletter--- */
     #newsletter-row-wrapper {
+        margin-top: 8rem;
         background-color: transparent;
-        grid-template-rows: 100px minmax(210px, max-content);
+        grid-template-rows: auto auto;
     }
 
     #newsletter-con {
@@ -400,23 +512,38 @@ nav ul li a {
 
         #newsletter {
             display: flex;
-            margin-left: 40px;
+            margin-left: 2.5rem;
             flex-direction: column;
             justify-content: space-evenly;
         }
+
+
+    #newsletter form {
+        margin: 3rem 2.5rem 3.5rem 0;
+    }
 
     #newsletter-img-con {
         grid-row: 1/3;
     }
 
     #newsletter-img {
-        width: 270px;
-        height: 100%;
-        background-size: auto 100%;
-        background-position: -30% 0;
+        width: 90%;
+        height: unset;
+        max-height: 400px;
+        aspect-ratio: 8/11;
+        background-size: cover;
     }
 
 
+    /* 9. ---Footer--- */
+    #main-footer {
+        padding: 1rem 0 1.25rem;
+        margin-top: 8rem;        
+    }
+
+    #footer-logo {
+        margin: 0;
+    }
 
     div:has(#footer-logo) {
         order: -1;
@@ -428,8 +555,143 @@ nav ul li a {
     }
 }
 
+/* 11. ---Desktop Styles--- */
+
+
 @media screen and (min-width: 1200px) {
    .l-text-left {text-align: left;}
    .l-text-right {text-align: right;}
    .l-text-center {text-align: center;}
+}
+
+
+/* --------- SHOPPING PAGE ----------- */
+/* 1. ---Shop Main Hero--- */
+#shop-hero {
+    background-color: #f5eee6;
+    overflow: hidden;
+    max-height: 600px;
+    /* box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.433); */
+}
+
+#shop-hero-text {
+    z-index: 5;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+#shop-hero-bottle {
+    transform: translateY(3rem) rotate(7deg);
+}
+
+#shop-hero-fg {
+    z-index: 3;
+}
+
+#strings {
+    background-image: url(../images/party-string.svg);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 380px;
+    height: 234px;
+}
+
+/* 2. ---Shop Catalog--- */
+
+#shop-list {
+    background-color: #FFF793;
+    z-index: 1;
+    padding: 1.5rem 0;
+}
+
+#shop-list li {
+    background-color: white;
+    align-content: space-evenly;
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+    grid-template-rows: auto auto 3rem;
+    row-gap: 1rem;
+}
+
+#shop-list li .btn {
+    text-transform: initial;
+    max-height: 4rem;
+    line-height: 1.5rem;
+}
+
+#shop-list li .price-tag {
+    text-align: right;
+}
+
+.promo-pic {
+    display: grid;
+    place-items: center;
+    grid-row: 1/4;
+}
+.berry-bottle .promo-pic {
+    background-color: aqua;
+}
+.berry-bottle .btn {
+    background-color: #2E1DA4;
+}
+.orange-bottle .btn {
+    background-color: #E25016;
+}
+.berry-bottle .btn:hover {
+    background-color: rgb(100, 149, 237);
+}
+.orange-bottle .btn:hover {
+    background-color: rgb(255, 127, 80);
+}
+.orange-bottle .promo-pic {
+    background-color: #FFF793;
+}
+.berry-bottle .h-text {
+    color: #2E1DA4;
+}
+.orange-bottle .h-text {
+    color: #E25016;
+}
+
+
+/* 3. ---Reponsive Catalog--- */
+@media screen and (min-width: 768px) {
+    #shop-hero {
+        max-height: 480px;
+    }
+    #shop-hero-text {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }       
+    #shop-hero-bottle {
+        transform: translateY(4rem) translateX(1rem) rotate(10deg);
+    }
+
+    #shop-list li {
+        padding: 2rem;
+    }
+
+    #shop-list li .btn {
+        max-height: 3rem;
+        line-height: unset;
+    }
+    
+    #shop-list li .price-tag {
+        text-align: left;
+        order: 2;
+    }
+
+    #shop-list li .btn {
+        order: 4;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #shop-hero {
+        max-height: 528px;
+    }
+
+    #shop-hero-bottle {
+        transform: translateY(4rem) translateX(3rem) rotate(10deg);
+    }
 }

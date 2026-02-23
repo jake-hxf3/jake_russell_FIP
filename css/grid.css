@@ -83,6 +83,11 @@ body, p, h1, h2, h3, h4, h5, ul {
    padding: 0 16px;
 }
 
+.subgrid-con {
+   display: grid;
+   grid-template-columns: subgrid;
+}
+
 /* Add full width grid con for nesting, later */
 
 .col-span-1	{grid-column: span 1;}
