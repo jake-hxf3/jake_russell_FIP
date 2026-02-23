@@ -1,7 +1,7 @@
 /* 1. ---General Styles--- */
 @font-face {
     font-family: "Kotton";
-    src: url(fonts/Kotton.woff) format('woff');
+    src: url(../fonts/Kotton.woff) format('woff');
 }
 
 body {
