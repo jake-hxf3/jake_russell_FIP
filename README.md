@@ -1,5 +1,5 @@
 # FIP - Squeezit Juice
-![insert alt text](images/example.jpg)
+![Squeezit Logo](images/logo-main.svg)
 
 This is a website project about the brand of Squeezit Street Juice.
 
