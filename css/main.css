@@ -91,6 +91,10 @@ nav ul li a {
 
 
 /* 2.3. Fonts */
+:root {
+    font-size: clamp(14px, 2vw, 16px);
+}
+
 .h-text {
     font-family: "Kotton", Helvetica, sans-serif;
     font-size: 1.75rem;
@@ -197,7 +201,7 @@ a:not(.btn):hover {
 
 /* 3. ---Main Nav--- */
 #main-header {
-    background-color: #FFF793;
+    background-color: #fff;
     padding-bottom: 10px;
 }
 
@@ -228,6 +232,7 @@ a:not(.btn):hover {
     }
 
 #main-nav {
+    background-color: #FFF793;
     order: 4;
 }
 
@@ -239,7 +244,7 @@ a:not(.btn):hover {
         border-radius: 50px;
     }
     #burger-con li:hover {
-        background-color: #E6DC49;
+        background-color: #c3c3c3;
     }
     #burger-con li a {
         display: block;
@@ -248,13 +253,19 @@ a:not(.btn):hover {
         font-weight: 600;
     }
 
-#shop-now-btn {
-    display: none;
+#func-btn {
+    display: flex;
+    width: 70%;
+    justify-self: end;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #a340ff;
 }
 
-#func-btn {
-    justify-self: end;
+#func-btn .ico{
+    width: clamp(32px, 8vw, 48px);
 }
+
 
 .collapsible {
     display: flex !important; 
@@ -265,25 +276,35 @@ a:not(.btn):hover {
 
 /* 4. ---Hero Section--- */
 #hero {
+    max-height: 85vw;
     overflow-y: hidden;
     background-color: gray;
     background-blend-mode: difference;
 }
 
 #hero-bg {
+    position: relative;
+}
+    #hero-bg img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+    }
+
+#hero-main {
     padding-top: 2.5rem;
-    background-color: rgba(18, 18, 18, 0.542);
-    background-image: url(../images/graffiti-wall-frame.jpg);
-    background-blend-mode: darken;
-    background-size: cover;
-    background-repeat: no-repeat;
+    z-index: 3;
 }
 
-#hero p.emph {
-    font-size: 1.25rem;
-    color: #FFF793;
-    filter:  drop-shadow(0px 3px 3px black);
+#hero-big-text p.emph {
+    font-size: 6.4rem;
+    color: white;
+    text-align: center;
+    filter:  drop-shadow(0.5rem 0rem 1.2rem black);
     margin: 1rem 3rem 1.5rem;
+    user-select: none;
 }
 
 #hero-shop-now-btn {
@@ -292,63 +313,45 @@ a:not(.btn):hover {
 
 #hero-fg {
     filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.462));
-    margin-bottom: 2.5rem;
+}
+
+#hero-fg {
+    align-self: end;
+    margin-top: 25%;
 }
 
 #hero-fg img {
     display: block;
     margin: 0 auto;
+    width: 80%;
+}
+
+/* 4. ---About Section--- */
+.up-wave {
+    height: 430px;
+    position: relative;
+    overflow: hidden;
+}
+/* courtesy of James Auble */
+.wavy-top {
+    width: 100%;
+    aspect-ratio: 1/1;
+    clip-path: url(#wave);
+    background-color: #FFF793;
+    position: absolute;
+    top: 0;
+}
+
+#about {
+    margin-top: -14%;
+    z-index: 4;
 }
 
 
-/* 5. ---Products Section--- */
-#product {
-    margin-top: 2.5rem;
-}
 
-#product-slider-con {
-    overflow-x: scroll;
-    margin: 2rem 0;
-}
-#product-slider {
-    display: flex;
-    width: 1000px;
-    list-style: none;
-    justify-content: space-around;
-}
 
-#product-slider li {
-    width: 130px;
-    display: grid;
-    grid-template-rows: auto auto;
-    text-align: center;
-    align-content: start;
-}
 
-.product-img {
-    margin: 0 auto;
-    width: 90px;
-    aspect-ratio: 90/246;
-    margin-bottom: 20px;
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.462));
-}
-
-#view-all-btn {
-    margin: 0 2.5rem;
-}
-
-/* 6. ---Kids Drink Section--- */
-
-/* 7. ---Real Fruits Section--- */
-#feature-2 {
-    margin-top: 8rem;
-}
-
-#fruit-drawing {
-    margin-top: 4rem;
-}
-
-/* 8. ---Newsletter Section--- */
+/* 8. ---Newsletter Section--- 
 #newsletter-row-wrapper {
     margin-top: 6rem;
     background-color: lightgray;
@@ -369,13 +372,13 @@ a:not(.btn):hover {
 
     #newsletter-img {
         height: 500px;
-        background-image: url(../images/poster2.webp);
+        background-image: url(../images/poster2.jpg);
         background-size: contain;
         background-position: 50%;
         background-repeat: no-repeat;
         margin-bottom: 3rem;
     }
-
+*/
 
 /* 9. ---Footer--- */
 #main-footer {
@@ -425,6 +428,10 @@ a:not(.btn):hover {
     grid-row: 1/1;
    }
 
+    :root {
+        font-size: clamp(14px, 1.2vw, 32px);
+    }
+
     .btn {
         font-size: 1.125rem;
     }
@@ -436,8 +443,12 @@ a:not(.btn):hover {
         display: none;
     }
 
-    #main-nav {
+    #main-logo {
         order: -1;
+    }
+
+    #main-nav {
+        order: unset;
     }
 
     #burger-con {
@@ -446,46 +457,27 @@ a:not(.btn):hover {
 
 
     /* 4. ---Hero Section--- */
-
     #hero {
-        max-height: 580px;
+        max-height: 65vw;
     }
 
-    #shop-now-btn {
-        display: block;
+    #hero-bg img {
+        width: 100%;
+        height: unset;
     }
 
-    #hero p.emph {
-        font-size: 1.5rem;
+    #hero-big-text p.emph {
+        font-size: 8rem;
     }
 
-    #hero-shop-now-btn {
-        display: none;
+    #hero-big-text {
+        margin-top: 13%;
     }
 
     #hero-fg {
-        padding-top: 10%;
+        margin-top: 32%;
     }
 
-
-    /* 5. ---Product Showcase--- */
-
-    #product-slider {
-        width: 100%;
-        min-width: 1000px;
-    }
-
-    #view-all-btn {
-        margin: 0;
-    }
-
-    .product-img {
-        width: 117px;
-    }
-
-    .product-img:hover > img {
-        animation: wiggle 0.3s 0.2s alternate;
-    }
 
     @keyframes wiggle {
         20% {transform: rotate(7deg);}
@@ -496,7 +488,7 @@ a:not(.btn):hover {
     }
 
 
-    /* 8. ---Newsletter--- */
+    /* 8. ---Newsletter--- 
     #newsletter-row-wrapper {
         margin-top: 8rem;
         background-color: transparent;
@@ -534,6 +526,7 @@ a:not(.btn):hover {
         background-size: cover;
     }
 
+*/
 
     /* 9. ---Footer--- */
     #main-footer {
@@ -562,136 +555,4 @@ a:not(.btn):hover {
    .l-text-left {text-align: left;}
    .l-text-right {text-align: right;}
    .l-text-center {text-align: center;}
-}
-
-
-/* --------- SHOPPING PAGE ----------- */
-/* 1. ---Shop Main Hero--- */
-#shop-hero {
-    background-color: #f5eee6;
-    overflow: hidden;
-    max-height: 600px;
-    /* box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.433); */
-}
-
-#shop-hero-text {
-    z-index: 5;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-}
-
-#shop-hero-bottle {
-    transform: translateY(3rem) rotate(7deg);
-}
-
-#shop-hero-fg {
-    z-index: 3;
-}
-
-#strings {
-    background-image: url(../images/party-string.svg);
-    background-repeat: no-repeat;
-    object-fit: cover;
-    width: 380px;
-    height: 234px;
-}
-
-/* 2. ---Shop Catalog--- */
-
-#shop-list {
-    background-color: #FFF793;
-    z-index: 1;
-    padding: 1.5rem 0;
-}
-
-#shop-list li {
-    background-color: white;
-    align-content: space-evenly;
-    padding: 0.75rem;
-    margin: 0.75rem 0;
-    grid-template-rows: auto auto 3rem;
-    row-gap: 1rem;
-}
-
-#shop-list li .btn {
-    text-transform: initial;
-    max-height: 4rem;
-    line-height: 1.5rem;
-}
-
-#shop-list li .price-tag {
-    text-align: right;
-}
-
-.promo-pic {
-    display: grid;
-    place-items: center;
-    grid-row: 1/4;
-}
-.berry-bottle .promo-pic {
-    background-color: aqua;
-}
-.berry-bottle .btn {
-    background-color: #2E1DA4;
-}
-.orange-bottle .btn {
-    background-color: #E25016;
-}
-.berry-bottle .btn:hover {
-    background-color: rgb(100, 149, 237);
-}
-.orange-bottle .btn:hover {
-    background-color: rgb(255, 127, 80);
-}
-.orange-bottle .promo-pic {
-    background-color: #FFF793;
-}
-.berry-bottle .h-text {
-    color: #2E1DA4;
-}
-.orange-bottle .h-text {
-    color: #E25016;
-}
-
-
-/* 3. ---Reponsive Catalog--- */
-@media screen and (min-width: 768px) {
-    #shop-hero {
-        max-height: 480px;
-    }
-    #shop-hero-text {
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-    }       
-    #shop-hero-bottle {
-        transform: translateY(4rem) translateX(1rem) rotate(10deg);
-    }
-
-    #shop-list li {
-        padding: 2rem;
-    }
-
-    #shop-list li .btn {
-        max-height: 3rem;
-        line-height: unset;
-    }
-    
-    #shop-list li .price-tag {
-        text-align: left;
-        order: 2;
-    }
-
-    #shop-list li .btn {
-        order: 4;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    #shop-hero {
-        max-height: 528px;
-    }
-
-    #shop-hero-bottle {
-        transform: translateY(4rem) translateX(3rem) rotate(10deg);
-    }
 }

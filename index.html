@@ -13,7 +13,7 @@
         <header id="main-header" class="full-width-grid-con">
             <div class="grid-con col-start-2 col-end-3">
                 <button id="burger" class="ico"></button> 
-                <nav id="main-nav" class="col-span-full m-col-start-1 m-col-end-5">
+                <nav id="main-nav" class="col-span-full m-col-start-6 m-col-end-11">
                     <h2 class="hidden">Main Navigation</h2>      
                     <ul id="burger-con">
                         <li><a href="#">Flavors</a></li>
@@ -22,97 +22,42 @@
                     </ul>
                 </nav>
 
-                <div id="main-logo" class="col-start-2 col-end-4 m-col-start-6 m-col-end-8">
+                <div id="main-logo" class="col-start-2 col-end-4 m-col-start-1 m-col-end-3">
                     <a href="index.html">
                         <img src="images/logo-main.svg" alt="squeezit logo">
                     </a>
                 </div>
 
-                <a id="shop-now-btn" href="shop.html" class="btn emph m-col-start-10 m-col-end-12">Shop Now</a>
-
-                <div id="func-btn" class="ico col-start-4 col-end-5 m-col-start-12 m-col-end-13">
-                    <img src="images/search-icon.svg" alt="icon">
+                <div id="func-btn" class="col-start-4 col-end-5 m-col-start-11 m-col-end-13">
+                    <a href="shop.html" class="ico"><img src="images/shopping-cart.svg" alt="shop now"></a>
+                    <a href="#" class="ico"><img src="images/search-icon.svg" alt="search" id="search-btn"></a>
                 </div>
             </div>
         </header>
 
         <main>
-            <section id="hero" class="full-width-grid-con decorated-bg">
+            <section id="hero" class="full-width-grid-con">
                 <h2 class="hidden">Main Hero</h2>
-                <div id="hero-bg" class="grid-con col-start-2 col-end-3">
-                    <div class="col-start-2 col-end-4 m-col-start-5 m-col-end-9 l-col-start-5 l-col-end-9">
-                        <img src="images/logo-main.svg" alt="Squeezit Hero Logo">
+                <div id="hero-bg" class="col-span-full overlap">
+                    <img src="images/hero-bg.jpg" alt="hero graffiti background image">
+                </div>
+                <div id="hero-main" class="grid-con col-start-2 col-end-3 overlap">
+
+                    <div id="hero-big-text" class="col-span-full m-col-start-2 m-col-end-12 overlap">
+                        <p class="emph">STREETJUICE</p>
                     </div>
-                    <p class="p-text emph col-span-full m-col-start-3 m-col-end-11">The 90s called. They want their drink back in the market.</p>
-                    <a href="#" id="hero-shop-now-btn" class="btn emph col-start-2 col-end-4">Shop Now</a>
-                    <div id="hero-fg" class="col-span-full m-col-start-3 m-col-end-11">
-                        <img src="images/render-bottle-transparent.png" alt="a bunch of squeezit bottles">
+                    <div id="hero-fg" class="col-span-full m-col-start-3 m-col-end-11 overlap">
+                        <img src="images/squeezit_bottles_B.png" alt="a bunch of squeezit bottles">
                     </div>
                 </div>
             </section>
 
-            <article id="product" class="grid-con centered">
-                <h2 class="h-text col-span-full">MEET THE SQUEEZIES</h2>
-                <p class="p-text col-span-full">SqueeZit is back with new, energetic flavors!<br>Revive your style, your swag & your energy like they did back in the 90s.</p>
-                <div id="product-slider-con" class="col-span-full">
-                    <ul id="product-slider">
-                        <li>
-                            <div class="product-img">
-                                <img src="images/blue-bottle-transparent.webp" alt="berry b wild bottle">
-                            </div>
-                            <p class="cap-text">Berry B. Wild</p>                        
-                        </li>
+            <div id="about" class="full-width-grid-con up-wave">
+                <div class="wavy-top"></div>
+            </div>
 
-                        <li>
-                            <div class="product-img">
-                                <img src="images/orange-bottle-transparent.webp" alt="street smart orange bottle">
-                            </div>
-                            <p class="cap-text">Street Smart Orange</p>   
-                        </li>
 
-                        <li>
-                            <div class="product-img">
-                                <img src="images/blue-bottle-transparent.webp" alt="berry b wild bottle">
-                            </div>
-                            <p class="cap-text">Berry B. Wild</p>                        
-                        </li>
-
-                        <li>
-                            <div class="product-img">
-                                <img src="images/orange-bottle-transparent.webp" alt="street smart orange bottle">
-                            </div>
-                            <p class="cap-text">Street Smart Orange</p>   
-                        </li>
-
-                        <li>
-                            <div class="product-img">
-                                <img src="images/blue-bottle-transparent.webp" alt="berry b wild bottle">
-                            </div>
-                            <p class="cap-text">Berry B. Wild</p>                        
-                        </li>
-
-                        <li>
-                            <div class="product-img">
-                                <img src="images/orange-bottle-transparent.webp" alt="street smart orange bottle">
-                            </div>
-                            <p class="cap-text">Street Smart Orange</p>   
-                        </li>
-                    </ul>                    
-                </div>
-                    
-                <a href="#" id="view-all-btn" class="btn col-start-2 col-end-4 m-col-start-6 m-col-end-8">View All</a>
-
-            </article>
-
-            <section id="feature-2" class="grid-con centered">
-                <h2 class="h-text col-span-full m-col-start-5 m-col-end-9">Now Made With Real Fruits</h2>
-                <p class="p-text col-span-full m-col-start-3 m-col-end-11">SqueeZit is back with real fruits in our production. You name it: Apple Apricot Avocado Banana Bilberry Blackberry Blackcurrant Blueberry Boysenberry Currant Cherry Cherimoya Chicofruit Cloudberry</p>
-                <div id="fruit-drawing" class="col-span-full m-col-start-3 m-col-end-11">
-                    <img src="images/happy-fruits.svg" alt="happy fruits">    
-                </div>
-                
-            </section>
-
+<!--
             <div id="newsletter-row-wrapper" class="grid-con centered">
                 <div id="newsletter-con" class="col-span-full m-col-start-2 m-col-end-12">
                     <section id="newsletter" class="m-col-start-1 m-col-end-7">
@@ -130,6 +75,7 @@
                     </div>
 
             </div>
+-->
 
         </main>
 
@@ -177,6 +123,17 @@
             </div>
 
         </footer>
+
+        <div class="hidden">
+            <svg>
+                <defs>
+                <clipPath id="wave" clipPathUnits="objectBoundingBox">
+                    <path class="st0" d="M0,0.0541C0.1304,0.0338,0.2546,0.0154,0.5337,0.058C0.8128,0.1006,0.9998,0.0541,1,0.0541V1H0V0.0541z"/>
+                </clipPath>
+                </defs>
+            </svg>            
+        </div>
+
 
         <script src="js/main.js"></script>
     </body>
