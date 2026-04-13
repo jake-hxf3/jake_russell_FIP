@@ -176,17 +176,18 @@ a:not(.btn):hover {
     }
 
 
-    input[type="email"] {
+    input[type="email"], .std-input {
         appearance: none;
         caret-color: #47006D;
         border: #692891 2px solid;
         height: 3rem;
         padding: 0 1rem;
         font-size: 1rem;
-    }
-
-    input[type="email"]:hover {
-        border: #D2A3FF 2px solid;
+        transition: 0.5s ease-in-out all;
+    
+        &:hover {
+            border: #D2A3FF 2px solid;
+        }
     }
 
 
@@ -199,11 +200,53 @@ a:not(.btn):hover {
         display: grid;
         place-items: center;
         font-size: 1.125rem;
+        transition: 0.5s ease-in-out all;
     }
     input[type="submit"]:hover {
         background-color: #a340ff;
     }
 
+    input[type="checkbox"] {
+        appearance: none;
+        width: 2rem;
+        aspect-ratio: 1/1;
+        border: #692891 2px solid;
+        transition: all 0.5s ease-in-out;
+        display: grid;
+        place-items: center;
+
+        &:hover {
+            background-color: #E8C1FF;
+        }
+
+        &:checked::after {
+            content: "";
+            width: 2rem;
+            height: 2rem;
+            margin-left: 0.3rem;
+            grid-area: 1/-1;
+            background-image: url(../images/tick.svg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    }
+
+    textarea.std-input {
+        display: block;
+        height: 10rem;
+        resize: none;
+        padding: 0.8rem;
+    }
+
+    .checker {
+        display: flex;
+        align-items: center;
+    }
+
+    .checker label {
+        order: 1;
+        margin-left: 1rem;
+    }
 
 
 
@@ -561,7 +604,7 @@ a:not(.btn):hover {
 }
 
 /* A1. ---Shop Page Hero--- */
-#shop-hero {
+.page-hero {
     height: 50rem;
 }
 
@@ -569,29 +612,33 @@ a:not(.btn):hover {
     background-color: #FFF793;
 }
 
-#shop-hero-info {
+.hero-info {
     margin-top: 3rem;
 }
 
-#shop-hero h2.h-text {
+.hero-info h2.h-text {
     line-height: 4rem;
 }
 
-#shop-hero-bg {
+.hero-info p {
+    font-size: 1.2rem;
+}
+
+.hero-bg {
     display: flex;
     align-items: end;
 }
-#shop-hero-bg img {
+.hero-bg img {
     transform: scaleX(-1) translateY(5rem);
 }
 
-#shop-hero-fg {
+.hero-fg {
     height: 100%;
     align-items: center;
     z-index: 2;
 }
 
-#shop-hero-fg > div {
+.hero-fg > div {
     display: flex;
     justify-content: center;
 }
@@ -673,8 +720,71 @@ a:not(.btn):hover {
     }
 }
 
+/* B1. ---Contact Us Hero--- */
+#contact-hero-bg {
+    background-color: #FFF793;
+}
+
+#contact-hero-bg img {
+    transform: translateY(-5rem);
+}
+
+#contact-hero-info h2 {
+    max-width: 80%;
+    line-height: 2ch;
+    margin-bottom: 2ch;
+}
+
+#contact-hero-fg {
+    display: flex;
+    align-items: flex-end;
+    padding: 4% 7%;
+}
+
+/* B2. ---Contact Us Form--- */
+#form-section {
+    --bg-col: #fff;
+}
+
+#form-section .std-input {
+    display: block;
+    width: 100%;
+}
+
+#form-section .wave-content {
+    background-image: none;
+}
+
+#form-info {
+    margin-right: 2rem;
+    margin-bottom: 4rem;
+}
+
+.form-field {
+    margin-bottom: 1.2rem;
+}
+.form-field label+.std-input {
+    margin-top: 0.3rem;
+}
+
+#form-section input[type="submit"] {
+    width: 80%;
+    font-size: 1.5rem;
+}
+
+.form-field+input[type="submit"] {
+    margin-top: 2rem;
+}
 
 
+/* C. ---Lightbox--- */
+#litebox {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgb(82, 82, 82);
+    z-index: 50;
+}
 
 /* 10. ---Responsiveness--- */
 @media screen and (min-width: 768px) {
@@ -757,6 +867,7 @@ a:not(.btn):hover {
     /* 5. ---About Section--- */
     #about {
         height: 64rem;
+        --wave-margin: min(30%,200px);
         padding-bottom: 50%;
     }
 
@@ -868,11 +979,11 @@ a:not(.btn):hover {
 
     
     /* A1. ---Shop Page Hero--- */
-    #shop-hero {
+    .page-hero {
         height: 40rem;
     }
 
-    #shop-hero-bg img {
+    .hero-bg img {
         transform: scaleX(-1) translateY(15rem);
     }
 
@@ -885,12 +996,29 @@ a:not(.btn):hover {
         transform: rotate(5deg) translate(-7rem,8rem);
     }
 
-    /* A1. ---Shop Page List--- */   
+    /* A2. ---Shop Page List--- */   
     .shop-wave .wave-content {
         min-height: 54rem;
     }
 
+    /* B1. ---Contact Page Hero--- */
+    #contact-hero-bg img {
+        transform: scaleX(-1) translateY(15rem);
+    }
 
+    #contact-hero-fg {
+        align-items: center;
+    }
+
+    /* B2. ---Contact Page Form--- */
+    #form-section {
+        --wave-margin: min(50%,250px);
+        height: 62rem;
+    }
+
+    textarea.std-input {
+        height: 7rem;
+    }
 }
 
 /* 11. ---Desktop Styles--- */
