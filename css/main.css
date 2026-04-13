@@ -780,11 +780,58 @@ a:not(.btn):hover {
 /* C. ---Lightbox--- */
 #litebox {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     position: fixed;
-    background-color: rgb(82, 82, 82);
+    inset: 0;
     z-index: 50;
+    background-image: url(../images/lightbox-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5vw;
 }
+
+#litebox > div {
+    align-content: space-around;
+    grid-row: 1/-1;
+}
+
+#litebox article {
+    align-content: start;
+}
+
+#litebox h2, #litebox p {
+    color: #fff;
+}
+
+#litebox p {
+    margin-block: 2rem;
+}
+
+#litebox article a {
+    margin-inline: 35%;
+}
+
+#litebox-img {
+    transform: scale(1.4) rotate(5deg) translateY(3rem);
+}
+
+div:has(#close-btn) {
+    order: -1;
+    grid-row: 1/-1;
+    align-self: start;
+}
+#close-btn {
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    transition: 0.5s ease-in-out all;
+
+    &:hover {
+        color: #ff0000;
+    }
+}
+
 
 /* 10. ---Responsiveness--- */
 @media screen and (min-width: 768px) {
@@ -1018,6 +1065,23 @@ a:not(.btn):hover {
 
     textarea.std-input {
         height: 7rem;
+    }
+
+    /* C. ---Lightbox--- */
+
+    #litebox > div {
+        align-content: center;
+    }
+
+    #litebox article a {
+        margin-left: 0;
+        margin-right: 10%;
+        max-width: 15rem;
+    }
+
+    #litebox-img {
+        order: -1;
+        transform: none;
     }
 }
 
