@@ -100,6 +100,7 @@ nav ul li a {
     font-family: "Kotton", Helvetica, sans-serif;
     font-size: 1.75rem;
     color:#692891;
+    letter-spacing: 0.1ch;
 }
 
 p {
@@ -140,8 +141,9 @@ a:not(.btn):hover {
 
 .price-tag {
     color: green;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: "Kotton", Arial, sans-serif;
+    margin: 1ch 0;
 }
 
 .text-left {text-align: left;}
@@ -174,17 +176,18 @@ a:not(.btn):hover {
     }
 
 
-    input[type="email"] {
+    input[type="email"], .std-input {
         appearance: none;
         caret-color: #47006D;
         border: #692891 2px solid;
         height: 3rem;
         padding: 0 1rem;
         font-size: 1rem;
-    }
-
-    input[type="email"]:hover {
-        border: #D2A3FF 2px solid;
+        transition: 0.5s ease-in-out all;
+    
+        &:hover {
+            border: #D2A3FF 2px solid;
+        }
     }
 
 
@@ -197,11 +200,53 @@ a:not(.btn):hover {
         display: grid;
         place-items: center;
         font-size: 1.125rem;
+        transition: 0.5s ease-in-out all;
     }
     input[type="submit"]:hover {
         background-color: #a340ff;
     }
 
+    input[type="checkbox"] {
+        appearance: none;
+        width: 2rem;
+        aspect-ratio: 1/1;
+        border: #692891 2px solid;
+        transition: all 0.5s ease-in-out;
+        display: grid;
+        place-items: center;
+
+        &:hover {
+            background-color: #E8C1FF;
+        }
+
+        &:checked::after {
+            content: "";
+            width: 2rem;
+            height: 2rem;
+            margin-left: 0.3rem;
+            grid-area: 1/-1;
+            background-image: url(../images/tick.svg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    }
+
+    textarea.std-input {
+        display: block;
+        height: 10rem;
+        resize: none;
+        padding: 0.8rem;
+    }
+
+    .checker {
+        display: flex;
+        align-items: center;
+    }
+
+    .checker label {
+        order: 1;
+        margin-left: 1rem;
+    }
 
 
 
@@ -238,7 +283,6 @@ a:not(.btn):hover {
     }
 
 #main-nav {
-    background-color: #FFF793;
     order: 4;
 }
 
@@ -265,11 +309,14 @@ a:not(.btn):hover {
     justify-self: end;
     align-items: center;
     justify-content: space-between;
-    background-color: #a340ff;
 }
 
 #func-btn .ico{
     width: clamp(32px, 8vw, 48px);
+}
+
+#search-btn {
+    display: none;
 }
 
 
@@ -505,6 +552,9 @@ a:not(.btn):hover {
         width: 67%;
     }
 
+#newsletter.shop-newsletter {
+    margin-bottom: 10rem;
+}
 
 /* 9. ---Footer--- */
 #main-footer {
@@ -553,6 +603,235 @@ a:not(.btn):hover {
     font-size: 1.3rem;
 }
 
+/* A1. ---Shop Page Hero--- */
+.page-hero {
+    height: 50rem;
+}
+
+#shop-hero-bg {
+    background-color: #FFF793;
+}
+
+.hero-info {
+    margin-top: 3rem;
+}
+
+.hero-info h2.h-text {
+    line-height: 4rem;
+}
+
+.hero-info p {
+    font-size: 1.2rem;
+}
+
+.hero-bg {
+    display: flex;
+    align-items: end;
+}
+.hero-bg img {
+    transform: scaleX(-1) translateY(5rem);
+}
+
+.hero-fg {
+    height: 100%;
+    align-items: center;
+    z-index: 2;
+}
+
+.hero-fg > div {
+    display: flex;
+    justify-content: center;
+}
+
+#shop-hero-guy {
+    transform: scale(0.72) translateY(-7rem);
+}
+
+#shop-hero-bottle {
+    align-self: end;
+    transform: rotate(5deg) translateY(5rem);
+}
+
+
+/* A2. ---Shop Page List--- */
+.shop-wave .wave-content {
+    background-size: cover;
+    background-position: 50% 15rem;
+    background-blend-mode: hard-light;
+}
+
+.cloud-img {
+    margin-top: 40%;
+}
+
+.bottle-img {
+    margin-right: 20%;
+    filter: drop-shadow(0.2rem 0.2rem 0.1rem black);
+}
+
+
+#berry-section {          
+    --bg-col: #B0F0FF;
+    --text-col: #2E1DA4;
+}
+
+#orange-section {
+    --bg-col: #FFEB93;
+    --text-col: #FF6A00;
+}
+
+#cherry-section {
+    --bg-col: #FFCCD4;
+    --text-col: #FF0026;
+}
+
+#berry-section .wave-content {
+    background-image: url(../images/halftones_b.svg);
+}
+#orange-section .wave-content {
+    background-image: url(../images/halftones_o.svg);
+}
+#cherry-section .wave-content {
+    background-image: url(../images/halftones_w.svg);
+    background-position: 50% 5rem;
+}
+
+
+.shop-img > div{
+    grid-row: 1/-1;
+    height: 30rem;
+}
+
+.shoplist-info {
+    margin-left: 10%;
+    align-content: center;
+
+    h2 {
+        color: var(--text-col);
+    }
+
+    .btn {
+        background-color: var(--text-col);
+        transition: filter 0.5s ease-in-out;
+    }
+
+    .btn:hover {
+        filter: brightness(215%);
+    }
+}
+
+/* B1. ---Contact Us Hero--- */
+#contact-hero-bg {
+    background-color: #FFF793;
+}
+
+#contact-hero-bg img {
+    transform: translateY(-5rem);
+}
+
+#contact-hero-info h2 {
+    max-width: 80%;
+    line-height: 2ch;
+    margin-bottom: 2ch;
+}
+
+#contact-hero-fg {
+    display: flex;
+    align-items: flex-end;
+    padding: 4% 7%;
+}
+
+/* B2. ---Contact Us Form--- */
+#form-section {
+    --bg-col: #fff;
+}
+
+#form-section .std-input {
+    display: block;
+    width: 100%;
+}
+
+#form-section .wave-content {
+    background-image: none;
+}
+
+#form-info {
+    margin-right: 2rem;
+    margin-bottom: 4rem;
+}
+
+.form-field {
+    margin-bottom: 1.2rem;
+}
+.form-field label+.std-input {
+    margin-top: 0.3rem;
+}
+
+#form-section input[type="submit"] {
+    width: 80%;
+    font-size: 1.5rem;
+}
+
+.form-field+input[type="submit"] {
+    margin-top: 2rem;
+}
+
+
+/* C. ---Lightbox--- */
+#litebox {
+    width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    background-image: url(../images/lightbox-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5vw;
+}
+
+#litebox > div {
+    align-content: space-around;
+    grid-row: 1/-1;
+}
+
+#litebox article {
+    align-content: start;
+}
+
+#litebox h2, #litebox p {
+    color: #fff;
+}
+
+#litebox p {
+    margin-block: 2rem;
+}
+
+#litebox article a {
+    margin-inline: 35%;
+}
+
+#litebox-img {
+    transform: scale(1.4) rotate(5deg) translateY(3rem);
+}
+
+div:has(#close-btn) {
+    order: -1;
+    grid-row: 1/-1;
+    align-self: start;
+}
+#close-btn {
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    transition: 0.5s ease-in-out all;
+
+    &:hover {
+        color: #ff0000;
+    }
+}
+
 
 /* 10. ---Responsiveness--- */
 @media screen and (min-width: 768px) {
@@ -596,6 +875,10 @@ a:not(.btn):hover {
         display: flex;
     }
 
+    #search-btn {
+        display: block;
+    }
+
 
     /* 4. ---Hero Section--- */
     #hero {
@@ -631,6 +914,7 @@ a:not(.btn):hover {
     /* 5. ---About Section--- */
     #about {
         height: 64rem;
+        --wave-margin: min(30%,200px);
         padding-bottom: 50%;
     }
 
@@ -706,6 +990,10 @@ a:not(.btn):hover {
         width: 87%;
     }
 
+    #newsletter.shop-newsletter #newsletter-main {
+        background-color: #FFEB93;
+    }
+
 
 
     /* 9. ---Footer--- */
@@ -735,13 +1023,75 @@ a:not(.btn):hover {
         font-size: 1rem;
         line-height: unset;
     }
+
+    
+    /* A1. ---Shop Page Hero--- */
+    .page-hero {
+        height: 40rem;
+    }
+
+    .hero-bg img {
+        transform: scaleX(-1) translateY(15rem);
+    }
+
+    #shop-hero-guy {
+        transform: scale(0.92) translateY(-7rem);
+    }
+
+    #shop-hero-bottle {
+        align-self: end;
+        transform: rotate(5deg) translate(-7rem,8rem);
+    }
+
+    /* A2. ---Shop Page List--- */   
+    .shop-wave .wave-content {
+        min-height: 54rem;
+    }
+
+    /* B1. ---Contact Page Hero--- */
+    #contact-hero-bg img {
+        transform: scaleX(-1) translateY(15rem);
+    }
+
+    #contact-hero-fg {
+        align-items: center;
+    }
+
+    /* B2. ---Contact Page Form--- */
+    #form-section {
+        --wave-margin: min(50%,250px);
+        height: 62rem;
+    }
+
+    textarea.std-input {
+        height: 7rem;
+    }
+
+    /* C. ---Lightbox--- */
+
+    #litebox > div {
+        align-content: center;
+    }
+
+    #litebox article a {
+        margin-left: 0;
+        margin-right: 10%;
+        max-width: 15rem;
+    }
+
+    #litebox-img {
+        order: -1;
+        transform: none;
+    }
 }
 
 /* 11. ---Desktop Styles--- */
-
 
 @media screen and (min-width: 1200px) {
    .l-text-left {text-align: left;}
    .l-text-right {text-align: right;}
    .l-text-center {text-align: center;}
 }
+
+
+
