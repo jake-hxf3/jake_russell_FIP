@@ -17,7 +17,7 @@ const submitBtn = document.querySelector("#goBtn");
 
 const storyBtn = document.querySelector("#story-btn");
 const storyTxt = document.querySelector("#story-text");
-const story = "The Hog Rider card is unlocked from the Spell Valley (Arena 5). He is a very fast building-targeting, melee troop with moderately high hitpoints and damage. He appears just like his Clash of Clans counterpart; a man with brown eyebrows, a beard, a mohawk, and a golden body piercing in his left ear who is riding a hog. A Hog Rider card costs 4 Elixir to deploy.";
+const story = "In the 90s, Squeezit used to be the flavors beloved by all kinds of kids. That is, until some other heroes arise. But now, more kids everywhere is facing the problem of the Thirst. When other drinks have seemed to be ineffective, Squeezit return to the battle with its old sting.";
 let ogTxt = null;
 
 let isStoryExpanded = false;
@@ -32,21 +32,21 @@ let openedItem = {
 let productInfo = {
     cherry: {
         title: "Chucklin' Cherry",
-        desc: `bruh`,
+        desc: `Why is it chucklin'? That's because you will also chuckle when you drink this. Chuckle because you are relieved from thirst, of course`,
         image: "squeezit_bottle_pink.png",
         btnColor: "#FF0026",
     },
 
     orange: {
         title: "Streetwise Orange",
-        desc: `bruh`,
+        desc: `Once labeled as a drink for the nerdy, Orange now has been through a lot on the streets. No longer book smart, but street smart. In other words, absolutely cool.`,
         image: "squeezit_bottle_orange.png",
         btnColor: "#FF6A00",
     },
 
     blueberry: {
         title: "Berry B. Wild",
-        desc: `bruh`,
+        desc: `Berry is being wild as ever, because he ain't gonna let any thirst escape. And, don't forget to be wild is to be natural. This is natural stuff, kids`,
         image: "squeezit_bottle_blue.png",
         btnColor: "#2E1DA4",
     },
