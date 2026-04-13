@@ -67,6 +67,13 @@ nav ul li a {
 .btn-l {height: 3rem;}
 .btn-xl {height: 3.75rem;}
 
+#story-btn {
+    background-color: #fff;
+    color: #47006D;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
 /* 2.2. Icons */
 .ico {
     aspect-ratio: 1/1;
@@ -144,6 +151,14 @@ a:not(.btn):hover {
     font-size: 2.5rem;
     font-family: "Kotton", Arial, sans-serif;
     margin: 1ch 0;
+}
+
+#red-text {
+    color: #FF0026;
+}
+
+#green-text {
+    color: green;
 }
 
 .text-left {text-align: left;}
@@ -247,8 +262,6 @@ a:not(.btn):hover {
         order: 1;
         margin-left: 1rem;
     }
-
-
 
 /* 3. ---Main Nav--- */
 #main-header {
@@ -472,6 +485,11 @@ a:not(.btn):hover {
     overflow: hidden;
     background-image: url(../images/bottle-frame.png);
     margin: 5%;
+    cursor: pointer;
+
+    &:hover {
+        animation: wiggle 0.2s ease-in-out .2s;
+    }
 }
 
 .product-img img {
@@ -826,6 +844,7 @@ div:has(#close-btn) {
     border: none;
     color: #fff;
     transition: 0.5s ease-in-out all;
+    cursor: pointer;
 
     &:hover {
         color: #ff0000;
