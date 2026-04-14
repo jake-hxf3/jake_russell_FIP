@@ -434,13 +434,6 @@ a:not(.btn):hover {
 }
 
 
-
-#about {
-    --wave-margin: min(12%,200px);
-    height: 72rem;
-}
-
-
 .wave-info {
     align-content: center;
 }
@@ -510,12 +503,6 @@ a:not(.btn):hover {
 
 
 /* 5. ---Real Fruits Section--- */
-
-#real-fruits {
-    --wave-margin: min(12%,200px);
-    height: 64rem;
-}
-
 #real-fruits .wave-content {
     background-position: 50% 35%;
 }
@@ -933,12 +920,6 @@ div:has(#close-btn) {
     }
 
     /* 5. ---About Section--- */
-    #about {
-        height: 64rem;
-        --wave-margin: min(10vw,300px);
-        padding-bottom: 50%;
-    }
-
     #about .wave-content {
         background-size: 100%;
         background-position: 50% 120%;
@@ -951,9 +932,6 @@ div:has(#close-btn) {
 
 
     /* 7. ---Real Fruits Section--- */
-    #real-fruits {
-        height: 64rem;
-    }
 
     #real-fruits-info {
         order: 1;
@@ -1112,12 +1090,6 @@ div:has(#close-btn) {
    .l-text-left {text-align: left;}
    .l-text-right {text-align: right;}
    .l-text-center {text-align: center;}
-
-    #about {
-        height: 64rem;
-        --wave-margin: min(15vw,200px);
-        padding-bottom: 50%;
-    }
 }
 
 
