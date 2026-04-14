@@ -1093,7 +1093,7 @@ div:has(#close-btn) {
     #litebox article a {
         margin-left: 0;
         margin-right: 10%;
-        max-width: 15rem;
+        max-width: 25rem;
     }
 
     #litebox-img {
