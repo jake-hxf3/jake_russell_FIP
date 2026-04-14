@@ -420,6 +420,7 @@ a:not(.btn):hover {
 
 .wave-content {
     width: 100%;
+    padding-top: 2rem;;
     padding-bottom: 18rem;
     top: var(--wave-margin);
     background-color: var(--bg-col);
@@ -461,14 +462,13 @@ a:not(.btn):hover {
 /* 4. ---Products Section--- */
 .down-wave {
     background-image: url(../images/halftones_c.svg);
-    background-size: cover;
+    background-size: 100vw;
     background-repeat: no-repeat;
     background-position: 50% 100%;
 }
 
 #products {
     margin-top: 5rem;
-    background-size: 200vw;
 }
 
 #products-info {
@@ -524,10 +524,6 @@ a:not(.btn):hover {
 #newsletter .wave-content {
     background-size: 0%;
     padding-bottom: 10rem;
-}
-
-#newsletter-main {
-    margin-top: 2rem;
 }
 
 #newsletter-info {
@@ -920,13 +916,10 @@ div:has(#close-btn) {
     }
 
     /* 5. ---About Section--- */
-    #about .wave-content {
-        background-size: 100%;
-        background-position: 50% 120%;
-    }
+
 
     /* 6. ---Products Section--- */
-    #products {
+    .down-wave {
         background-size: unset;
     }
 
@@ -956,7 +949,7 @@ div:has(#close-btn) {
         padding-bottom: 18rem;
     }
     #newsletter-main {
-        margin-top: 6rem;
+        margin-top: 4rem;
         background-color: white;
         border: 3px solid black;
         box-shadow: 0.5rem 0.5rem 0 black;
@@ -1090,6 +1083,15 @@ div:has(#close-btn) {
    .l-text-left {text-align: left;}
    .l-text-right {text-align: right;}
    .l-text-center {text-align: center;}
+}
+
+@media screen and (min-width: 3000px) {
+    #hero {
+        max-height: unset;
+    }
+   .up-wave {
+        margin-top: calc(-0.7*var(--wave-margin));
+   }
 }
 
 
