@@ -443,6 +443,7 @@ a:not(.btn):hover {
     width: 100%;
     display: grid;
     justify-items: center;
+    align-self: bottom;
 }
 
 .img-comp img {
@@ -636,24 +637,13 @@ a:not(.btn):hover {
 }
 
 .hero-fg {
+    display: flex;
     height: 100%;
-    align-items: center;
+    justify-content: center;
+    align-items: end;
     z-index: 2;
 }
 
-.hero-fg > div {
-    display: flex;
-    justify-content: center;
-}
-
-#shop-hero-guy {
-    transform: scale(0.72) translateY(-7rem);
-}
-
-#shop-hero-bottle {
-    align-self: end;
-    transform: rotate(5deg) translateY(5rem);
-}
 
 
 /* A2. ---Shop Page List--- */
@@ -710,6 +700,12 @@ a:not(.btn):hover {
 
     h2 {
         color: var(--text-col);
+        line-height: 1.8ch;
+    }
+
+    p {
+        line-height: 2.5ch;
+        margin-top: 2ch;
     }
 
     .btn {
@@ -1029,15 +1025,6 @@ div:has(#close-btn) {
         font-size: 4rem;
     }
 
-    #shop-hero-guy {
-        transform: scale(0.92) translateY(-7rem);
-    }
-
-    #shop-hero-bottle {
-        align-self: end;
-        transform: rotate(5deg) translate(-7rem,8rem);
-    }
-
     /* A2. ---Shop Page List--- */   
     .shop-wave .wave-content {
         min-height: 54rem;
@@ -1087,9 +1074,14 @@ div:has(#close-btn) {
    .l-text-right {text-align: right;}
    .l-text-center {text-align: center;}
 
-   #shop-hero-info h2 {
+    #shop-hero-info h2 {
         font-size: min(4rem,70px);
         line-height: min(4.2rem,78px);
+    }
+
+    #shop-hero-fg {
+        align-items: start;
+        margin-top: 12vw;
     }
 }
 
@@ -1097,9 +1089,14 @@ div:has(#close-btn) {
     #hero {
         max-height: unset;
     }
-   .up-wave {
+    .up-wave {
         margin-top: calc(-0.7*var(--wave-margin));
-   }
+    }
+
+    #shop-hero-fg {
+        align-items: start;
+        margin-top: 5vw;
+    }
 }
 
 
