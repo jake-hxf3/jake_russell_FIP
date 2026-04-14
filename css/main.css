@@ -609,7 +609,10 @@ a:not(.btn):hover {
 
 /* A1. ---Shop Page Hero--- */
 .page-hero {
-    height: 50rem;
+    overflow-y: hidden;
+}
+#shop-hero {
+    height: 45rem;
 }
 
 #shop-hero-bg {
@@ -651,6 +654,7 @@ a:not(.btn):hover {
     background-size: cover;
     background-position: 50% 15rem;
     background-blend-mode: hard-light;
+    padding-bottom: 10rem;
 }
 
 .cloud-img {
@@ -700,12 +704,13 @@ a:not(.btn):hover {
 
     h2 {
         color: var(--text-col);
+        font-size: min(7vw,80px);
         line-height: 1.8ch;
     }
 
     p {
-        line-height: 2.5ch;
-        margin-top: 2ch;
+        line-height: 2.2ch;
+        margin-top: 2rem;
     }
 
     .btn {
@@ -721,10 +726,6 @@ a:not(.btn):hover {
 /* B1. ---Contact Us Hero--- */
 #contact-hero-bg {
     background-color: #FFF793;
-}
-
-#contact-hero-bg img {
-    transform: translateY(-5rem);
 }
 
 #contact-hero-info h2 {
@@ -751,6 +752,7 @@ a:not(.btn):hover {
 
 #form-section .wave-content {
     background-image: none;
+    padding-bottom: 6rem;
 }
 
 #form-info {
@@ -1013,15 +1015,15 @@ div:has(#close-btn) {
 
     
     /* A1. ---Shop Page Hero--- */
-    .page-hero {
-        height: 40rem;
+    #shop-hero {
+        height: 35rem;
     }
 
     .hero-bg img {
         transform: scaleX(-1) translateY(15rem);
     }
 
-    #shop-hero-info h2 {
+    .hero-bg h2 {
         font-size: 4rem;
     }
 
@@ -1030,21 +1032,13 @@ div:has(#close-btn) {
         min-height: 54rem;
     }
 
-    /* B1. ---Contact Page Hero--- */
-    #contact-hero-bg img {
-        transform: scaleX(-1) translateY(15rem);
-    }
 
+    /* B1. ---Contact Page Hero--- */
     #contact-hero-fg {
         align-items: center;
     }
 
     /* B2. ---Contact Page Form--- */
-    #form-section {
-        --wave-margin: min(50%,250px);
-        height: 62rem;
-    }
-
     textarea.std-input {
         height: 7rem;
     }
@@ -1082,6 +1076,25 @@ div:has(#close-btn) {
     #shop-hero-fg {
         align-items: start;
         margin-top: 12vw;
+    }
+
+    #contact-hero {
+        height: 28rem;
+    }
+
+    #contact-hero-info h2 {
+        font-size: min(4rem,60px);
+        line-height: min(4.2rem,78px);
+        margin-bottom: 1rem;
+    }
+
+    #contact-hero-info p {
+        font-size: 1rem;
+    }
+
+    #contact-hero-fg {
+        align-items: start;
+        padding-top: 5rem;
     }
 }
 
