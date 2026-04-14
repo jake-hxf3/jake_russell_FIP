@@ -366,11 +366,11 @@ a:not(.btn):hover {
 }
 
 #hero-big-text p.emph {
-    font-size: 6.4rem;
+    font-size: 15vw;
     color: white;
     text-align: center;
     filter:  drop-shadow(0.5rem 0rem 1.2rem black);
-    margin: 1rem 3rem 1.5rem;
+    margin: 1rem 3rem;
     user-select: none;
 }
 
@@ -436,7 +436,7 @@ a:not(.btn):hover {
 
 
 #about {
-    --wave-margin: min(16.5%,200px);
+    --wave-margin: min(12%,200px);
     height: 72rem;
 }
 
@@ -474,12 +474,12 @@ a:not(.btn):hover {
 }
 
 #products {
-    margin-top: 4rem;
+    margin-top: 5rem;
     background-size: 200vw;
 }
 
 #products-info {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .product-img {
@@ -512,7 +512,7 @@ a:not(.btn):hover {
 /* 5. ---Real Fruits Section--- */
 
 #real-fruits {
-    --wave-margin: min(16.5%,200px);
+    --wave-margin: min(12%,200px);
     height: 64rem;
 }
 
@@ -527,7 +527,7 @@ a:not(.btn):hover {
 
 /* 6. ---Video Section--- */
 #video {
-    padding: 12rem 0 16rem;
+    padding: 0rem 0 16rem;
 }
     #video-con {
         margin-top: 2.1rem;
@@ -912,11 +912,11 @@ div:has(#close-btn) {
     }
 
     #hero-big-text p.emph {
-        font-size: 8rem;
+        font-size: min(14vw,7rem);
     }
 
     #hero-big-text {
-        margin-top: 13%;
+        margin-top: 12%;
     }
 
     #hero-fg {
@@ -935,7 +935,7 @@ div:has(#close-btn) {
     /* 5. ---About Section--- */
     #about {
         height: 64rem;
-        --wave-margin: min(15%,200px);
+        --wave-margin: min(10vw,300px);
         padding-bottom: 50%;
     }
 
@@ -1115,7 +1115,7 @@ div:has(#close-btn) {
 
     #about {
         height: 64rem;
-        --wave-margin: min(30%,200px);
+        --wave-margin: min(15vw,200px);
         padding-bottom: 50%;
     }
 }
