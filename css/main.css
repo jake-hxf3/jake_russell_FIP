@@ -935,6 +935,10 @@ div:has(#close-btn) {
     #video {
         padding: 4rem 0 20rem;
     }
+    #video video {
+        width: 100%;
+        border: #47006D 0.5rem solid;
+    }
     #video-con {
         margin-top: 2rem;
     }
