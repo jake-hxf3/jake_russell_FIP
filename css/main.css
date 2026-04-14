@@ -366,11 +366,11 @@ a:not(.btn):hover {
 }
 
 #hero-big-text p.emph {
-    font-size: 6.4rem;
+    font-size: 15vw;
     color: white;
     text-align: center;
     filter:  drop-shadow(0.5rem 0rem 1.2rem black);
-    margin: 1rem 3rem 1.5rem;
+    margin: 1rem 3rem;
     user-select: none;
 }
 
@@ -420,6 +420,7 @@ a:not(.btn):hover {
 
 .wave-content {
     width: 100%;
+    padding-top: 2rem;;
     padding-bottom: 18rem;
     top: var(--wave-margin);
     background-color: var(--bg-col);
@@ -434,13 +435,6 @@ a:not(.btn):hover {
 }
 
 
-
-#about {
-    --wave-margin: min(16.5%,200px);
-    height: 72rem;
-}
-
-
 .wave-info {
     align-content: center;
 }
@@ -449,6 +443,7 @@ a:not(.btn):hover {
     width: 100%;
     display: grid;
     justify-items: center;
+    align-self: bottom;
 }
 
 .img-comp img {
@@ -468,18 +463,17 @@ a:not(.btn):hover {
 /* 4. ---Products Section--- */
 .down-wave {
     background-image: url(../images/halftones_c.svg);
-    background-size: cover;
+    background-size: 100vw;
     background-repeat: no-repeat;
     background-position: 50% 100%;
 }
 
 #products {
-    margin-top: 4rem;
-    background-size: 200vw;
+    margin-top: 5rem;
 }
 
 #products-info {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .product-img {
@@ -510,12 +504,6 @@ a:not(.btn):hover {
 
 
 /* 5. ---Real Fruits Section--- */
-
-#real-fruits {
-    --wave-margin: min(16.5%,200px);
-    height: 64rem;
-}
-
 #real-fruits .wave-content {
     background-position: 50% 35%;
 }
@@ -527,7 +515,7 @@ a:not(.btn):hover {
 
 /* 6. ---Video Section--- */
 #video {
-    padding: 12rem 0 16rem;
+    padding: 0rem 0 16rem;
 }
     #video-con {
         margin-top: 2.1rem;
@@ -537,10 +525,6 @@ a:not(.btn):hover {
 #newsletter .wave-content {
     background-size: 0%;
     padding-bottom: 10rem;
-}
-
-#newsletter-main {
-    margin-top: 2rem;
 }
 
 #newsletter-info {
@@ -625,7 +609,10 @@ a:not(.btn):hover {
 
 /* A1. ---Shop Page Hero--- */
 .page-hero {
-    height: 50rem;
+    overflow-y: hidden;
+}
+#shop-hero {
+    height: 45rem;
 }
 
 #shop-hero-bg {
@@ -653,24 +640,13 @@ a:not(.btn):hover {
 }
 
 .hero-fg {
+    display: flex;
     height: 100%;
-    align-items: center;
+    justify-content: center;
+    align-items: end;
     z-index: 2;
 }
 
-.hero-fg > div {
-    display: flex;
-    justify-content: center;
-}
-
-#shop-hero-guy {
-    transform: scale(0.72) translateY(-7rem);
-}
-
-#shop-hero-bottle {
-    align-self: end;
-    transform: rotate(5deg) translateY(5rem);
-}
 
 
 /* A2. ---Shop Page List--- */
@@ -678,6 +654,7 @@ a:not(.btn):hover {
     background-size: cover;
     background-position: 50% 15rem;
     background-blend-mode: hard-light;
+    padding-bottom: 10rem;
 }
 
 .cloud-img {
@@ -723,11 +700,17 @@ a:not(.btn):hover {
 }
 
 .shoplist-info {
-    margin-left: 10%;
     align-content: center;
 
     h2 {
         color: var(--text-col);
+        font-size: min(7vw,80px);
+        line-height: 1.8ch;
+    }
+
+    p {
+        line-height: 2.2ch;
+        margin-top: 2rem;
     }
 
     .btn {
@@ -743,10 +726,6 @@ a:not(.btn):hover {
 /* B1. ---Contact Us Hero--- */
 #contact-hero-bg {
     background-color: #FFF793;
-}
-
-#contact-hero-bg img {
-    transform: translateY(-5rem);
 }
 
 #contact-hero-info h2 {
@@ -773,6 +752,7 @@ a:not(.btn):hover {
 
 #form-section .wave-content {
     background-image: none;
+    padding-bottom: 6rem;
 }
 
 #form-info {
@@ -912,11 +892,11 @@ div:has(#close-btn) {
     }
 
     #hero-big-text p.emph {
-        font-size: 8rem;
+        font-size: min(14vw,7rem);
     }
 
     #hero-big-text {
-        margin-top: 13%;
+        margin-top: 12%;
     }
 
     #hero-fg {
@@ -933,27 +913,15 @@ div:has(#close-btn) {
     }
 
     /* 5. ---About Section--- */
-    #about {
-        height: 64rem;
-        --wave-margin: min(15%,200px);
-        padding-bottom: 50%;
-    }
 
-    #about .wave-content {
-        background-size: 100%;
-        background-position: 50% 120%;
-    }
 
     /* 6. ---Products Section--- */
-    #products {
+    .down-wave {
         background-size: unset;
     }
 
 
     /* 7. ---Real Fruits Section--- */
-    #real-fruits {
-        height: 64rem;
-    }
 
     #real-fruits-info {
         order: 1;
@@ -978,7 +946,7 @@ div:has(#close-btn) {
         padding-bottom: 18rem;
     }
     #newsletter-main {
-        margin-top: 6rem;
+        margin-top: 4rem;
         background-color: white;
         border: 3px solid black;
         box-shadow: 0.5rem 0.5rem 0 black;
@@ -1047,21 +1015,16 @@ div:has(#close-btn) {
 
     
     /* A1. ---Shop Page Hero--- */
-    .page-hero {
-        height: 40rem;
+    #shop-hero {
+        height: 35rem;
     }
 
     .hero-bg img {
         transform: scaleX(-1) translateY(15rem);
     }
 
-    #shop-hero-guy {
-        transform: scale(0.92) translateY(-7rem);
-    }
-
-    #shop-hero-bottle {
-        align-self: end;
-        transform: rotate(5deg) translate(-7rem,8rem);
+    .hero-bg h2 {
+        font-size: 4rem;
     }
 
     /* A2. ---Shop Page List--- */   
@@ -1069,21 +1032,13 @@ div:has(#close-btn) {
         min-height: 54rem;
     }
 
-    /* B1. ---Contact Page Hero--- */
-    #contact-hero-bg img {
-        transform: scaleX(-1) translateY(15rem);
-    }
 
+    /* B1. ---Contact Page Hero--- */
     #contact-hero-fg {
         align-items: center;
     }
 
     /* B2. ---Contact Page Form--- */
-    #form-section {
-        --wave-margin: min(50%,250px);
-        height: 62rem;
-    }
-
     textarea.std-input {
         height: 7rem;
     }
@@ -1113,10 +1068,47 @@ div:has(#close-btn) {
    .l-text-right {text-align: right;}
    .l-text-center {text-align: center;}
 
-    #about {
-        height: 64rem;
-        --wave-margin: min(30%,200px);
-        padding-bottom: 50%;
+    #shop-hero-info h2 {
+        font-size: min(4rem,70px);
+        line-height: min(4.2rem,78px);
+    }
+
+    #shop-hero-fg {
+        align-items: start;
+        margin-top: 12vw;
+    }
+
+    #contact-hero {
+        height: 28rem;
+    }
+
+    #contact-hero-info h2 {
+        font-size: min(4rem,60px);
+        line-height: min(4.2rem,78px);
+        margin-bottom: 1rem;
+    }
+
+    #contact-hero-info p {
+        font-size: 1rem;
+    }
+
+    #contact-hero-fg {
+        align-items: start;
+        padding-top: 5rem;
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    #hero {
+        max-height: unset;
+    }
+    .up-wave {
+        margin-top: calc(-0.7*var(--wave-margin));
+    }
+
+    #shop-hero-fg {
+        align-items: start;
+        margin-top: 5vw;
     }
 }
 
