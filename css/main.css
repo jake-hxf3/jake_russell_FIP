@@ -1026,6 +1026,10 @@ div:has(#close-btn) {
         transform: scaleX(-1) translateY(15rem);
     }
 
+    #shop-hero-info h2 {
+        font-size: 4rem;
+    }
+
     #shop-hero-guy {
         transform: scale(0.92) translateY(-7rem);
     }
@@ -1083,6 +1087,11 @@ div:has(#close-btn) {
    .l-text-left {text-align: left;}
    .l-text-right {text-align: right;}
    .l-text-center {text-align: center;}
+
+   #shop-hero-info h2 {
+        font-size: min(4rem,70px);
+        line-height: min(4.2rem,78px);
+    }
 }
 
 @media screen and (min-width: 3000px) {
