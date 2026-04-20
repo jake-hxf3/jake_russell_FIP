@@ -1,4 +1,5 @@
-# Functionality 1: Show A Lightbox
+# Squeezit Website Functionalities - Documentation
+## Functionality 1: Show A Lightbox
 
 First, I set an empty HTML element as a lightbox template, which is normally hidden. Then I use querySelector to select the lightbox and the elements on it to be changed with the new data from the JS file.
 
@@ -12,11 +13,11 @@ I use the dataset attribute on the clicked element, to relate it back to the rel
 
 Finally, append the image associated with the object into its position in the lightbox. To close the lightbox, append the image back to the thumbnail, and then set the hidden class to the lightbox again.
 
-# Functionality 2: Toggle expand a story
+## Functionality 2: Toggle expand a story
 
 In the about section, user may click "See More" to view the second part of the story. To do this, I add an click event listener to the button. Then, I set a global variable to track if the story is expanded. If it is not then first save the original content to another variable, then replace the story text with the new content. And, because the story is now expanded, set the tracking variable to true. Now if we want it to turn it back, set the story content to the saved original, and change the tracking variable to false.
 
-# Functionality 3: Validate and simulate subscription
+## Functionality 3: Validate and simulate subscription
 
 There is a email form field where user can type their email address in to subscribe. I haven't learn to properly do this yet, but I'll try my best to simulate it. Upon clicking the subscribe button, the script will read the email address.
 
